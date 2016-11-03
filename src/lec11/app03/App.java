@@ -7,6 +7,7 @@ import java.util.*;
  */
 
 public class App {
+
     public static void main(String[] args) {
         LinkedList<String> stringLinkedList = new LinkedList<>();
         stringLinkedList.add("abc");
@@ -16,19 +17,47 @@ public class App {
         stringLinkedList.add("лук");
         stringLinkedList.add("кукиш");
         stringLinkedList.add("куль");
+        stringLinkedList.add("укл");
+        stringLinkedList.add("кул");
 
-        for (String it:stringLinkedList) {
-            System.out.print(it + " ");
+        for (String s : stringLinkedList) {
+            System.out.print(s + " ");
         }
-
+        System.out.println();
         checkAnagram(stringLinkedList);
     }
 
     private static void checkAnagram(LinkedList<String> stringLinkedList) {
         LinkedList<String> tmpList = new LinkedList<>();
-        
-        for (String iteratorI : stringLinkedList) {
+        Map<String, Integer> hashMap = new HashMap<>();
+        LinkedList<Integer> indexWrd = new LinkedList<>();
 
+        for (String s : stringLinkedList) {
+            String str = sortString(s.toLowerCase());
+            tmpList.add(str);
+            hashMap.put(str, 0);
+        }
+
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            for (String s : tmpList) {
+                if (entry.getKey().equals(s)) {
+                    entry.setValue(entry.getValue() + 1);
+                }
+            }
+        }
+
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                for (int i = 0; i < tmpList.size(); i++) {
+                    if (entry.getKey().equals(tmpList.get(i))) {
+                        indexWrd.add(i);
+                    }
+                }
+            }
+        }
+
+        for (Integer pos : indexWrd) {
+            System.out.println(stringLinkedList.get(pos));
         }
     }
 
@@ -49,12 +78,5 @@ public class App {
             }
         }
         return new String(mass);
-    }
-
-    private static boolean checkEquals(String s1, String s2) {
-        if (s1.equalsIgnoreCase(s2)) {
-            return true;
-        }
-        return false;
     }
 }
