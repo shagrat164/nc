@@ -1,8 +1,6 @@
 package lec11.app03;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by student on 02.11.16.
@@ -10,28 +8,47 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
-        LinkedList<String> stringLinkedList = new LinkedList<String>();
+        LinkedList<String> stringLinkedList = new LinkedList<>();
         stringLinkedList.add("abc");
         stringLinkedList.add("cba");
         stringLinkedList.add("воз");
-        stringLinkedList.add("зов");
+        stringLinkedList.add("Зов");
         stringLinkedList.add("лук");
+        stringLinkedList.add("кукиш");
         stringLinkedList.add("куль");
 
         for (String it:stringLinkedList) {
             System.out.print(it + " ");
         }
+
+        checkAnagram(stringLinkedList);
     }
 
     private static void checkAnagram(LinkedList<String> stringLinkedList) {
-//        LinkedList<String> result = new LinkedList<String>();
-        Map<Integer, String[]> resultMap = new HashMap<Integer, String[]>();
+        LinkedList<String> tmpList = new LinkedList<>();
+        
+        for (String iteratorI : stringLinkedList) {
 
-        for (String iterator:stringLinkedList) {
-            for (String iterator2:stringLinkedList) {
-//                char[] chars = iterator.toCharArray();
+        }
+    }
+
+    private static String sortString(String str) {
+        char[] mass = str.toCharArray();
+        for (int i = mass.length; i > 0; i--) {
+            boolean flag = true;
+            for (int j = 1; j < i; j++) {
+                if (mass[j] < mass[j-1]) { // по убыванию
+                    char ch = mass[j-1];
+                    mass[j-1] = mass[j];
+                    mass[j]=ch;
+                    flag = false;
+                }
+            }
+            if (flag) {
+                break;
             }
         }
+        return new String(mass);
     }
 
     private static boolean checkEquals(String s1, String s2) {
