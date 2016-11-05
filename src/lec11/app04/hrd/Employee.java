@@ -5,81 +5,120 @@ package lec11.app04.hrd;
 import java.util.Date;
 import java.util.HashSet;
 
-public class Employee {
-    private String firstName;
-    private String lastName;
-    private String middleName;
+public class Employee extends Person {
+    private static long id = 0;
+    private long employeeId;
     private int age;
-    private String sex;
     private Date birthday;
+    private Date dateEmployment;
     private Department department;
-    private HashSet<Project> projects;
+    private String position;
+    private HashSet<Project> currentProjects;
+    private HashSet<Project> completedProjects;
 
-    public Employee(String firstName, String lastName, String middleName, String sex) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.middleName = middleName;
-        this.sex = sex;
-        projects = new HashSet<>();
+    Employee(String firstName, String lastName, String middleName) {
+        super(firstName, lastName, middleName);
+        id+=1;
+        this.employeeId = id;
+        currentProjects = new HashSet<>();
+        completedProjects = new HashSet<>();
+        dateEmployment = new Date();
     }
 
-    public String getFirstName() {
-        return firstName;
+    /**
+     * Возвращает id сотрудника
+     */
+    public long getId() {
+        return employeeId;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
+    /**
+     * Возвращает возраст сотрудника
+     */
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
+    /**
+     * Возвращает дату рождения сотрудника
+     */
     public Date getBirthday() {
         return birthday;
     }
 
+    /**
+     * Устанавливает дату рождения сотрудника
+     */
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
+    /**
+     * Возвращает дату приёма на работу в компанию
+     */
+    public Date getDateEmployment() {
+        return dateEmployment;
+    }
+
+    /**
+     * Возвращает время работы в компании
+     */
+    public Date getWorkingHours() {
+        return dateEmployment;
+    }
+
+    /**
+     * Возвращает отдел в котором работает сотрудник
+     */
     public Department getDepartment() {
         return department;
     }
 
+    /**
+     * Устанавливает сотруднику отдел
+     */
     public void setDepartment(Department department) {
         this.department = department;
     }
 
-    public HashSet<Project> getProjects() {
-        return projects;
+    /**
+     * Возвращает должность
+     */
+    public String getPosition() {
+        return position;
+    }
+
+    /**
+     * Устанавливает должность
+     */
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public HashSet<Project> getCurrentProjects() {
+        return currentProjects;
+    }
+
+    public void addCurrentProjects(Project project) {
+        currentProjects.add(project);
+    }
+
+    public void removeCurrentProjects(Project project) {
+        currentProjects.remove(project);
+    }
+
+    public HashSet<Project> getCompletedProjects() {
+        return completedProjects;
+    }
+
+    public void addCompletedProjects(Project projects) {
+        completedProjects.add(projects);
+    }
+
+    public boolean equals(Employee employee) {
+        if (this.getId() == employee.getId()) {
+            return true;
+        }
+        return false;
     }
 }
