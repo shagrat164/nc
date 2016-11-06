@@ -1,4 +1,4 @@
-package lec11.app04.hrd;
+package lec11.app04.itfirma;
 
 // отдел
 
@@ -25,12 +25,16 @@ public class Department {
         return employees;
     }
 
-    public void addEmployee(Employee addEmployee) {
-        this.employees.add(addEmployee);
-        addEmployee.setDepartment(this);
+    void addEmployee(Employee employee) {
+        this.employees.add(employee);
     }
 
-    public void removeEmployee(HashSet<Employee> employees) {
-        this.employees = employees;
+    void removeEmployee(Employee employee) {
+        this.employees.remove(employee);
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

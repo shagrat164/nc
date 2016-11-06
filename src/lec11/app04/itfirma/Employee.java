@@ -1,28 +1,29 @@
-package lec11.app04.hrd;
+package lec11.app04.itfirma;
 
 // сотрудник
 
-import java.util.Date;
 import java.util.HashSet;
 
 public class Employee extends Person {
     private static long id = 0;
     private long employeeId;
-    private int age;
-    private Date birthday;
-    private Date dateEmployment;
     private Department department;
     private String position;
     private HashSet<Project> currentProjects;
     private HashSet<Project> completedProjects;
 
-    Employee(String firstName, String lastName, String middleName) {
+    public Employee(String firstName, String lastName, String middleName) {
         super(firstName, lastName, middleName);
         id+=1;
         this.employeeId = id;
         currentProjects = new HashSet<>();
         completedProjects = new HashSet<>();
-        dateEmployment = new Date();
+        HumanResourcesDepartment.addEmployeeList(this); // добавление в общий список
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        HumanResourcesDepartment.removeEmployeeList(this);
     }
 
     /**
@@ -30,41 +31,6 @@ public class Employee extends Person {
      */
     public long getId() {
         return employeeId;
-    }
-
-    /**
-     * Возвращает возраст сотрудника
-     */
-    public int getAge() {
-        return age;
-    }
-
-    /**
-     * Возвращает дату рождения сотрудника
-     */
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    /**
-     * Устанавливает дату рождения сотрудника
-     */
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
-    /**
-     * Возвращает дату приёма на работу в компанию
-     */
-    public Date getDateEmployment() {
-        return dateEmployment;
-    }
-
-    /**
-     * Возвращает время работы в компании
-     */
-    public Date getWorkingHours() {
-        return dateEmployment;
     }
 
     /**
@@ -79,6 +45,7 @@ public class Employee extends Person {
      */
     public void setDepartment(Department department) {
         this.department = department;
+        department.addEmployee(this);
     }
 
     /**
@@ -101,9 +68,10 @@ public class Employee extends Person {
 
     public void addCurrentProjects(Project project) {
         currentProjects.add(project);
+        project.addEmployees(this);
     }
 
-    public void removeCurrentProjects(Project project) {
+    void removeCurrentProjects(Project project) {
         currentProjects.remove(project);
     }
 
@@ -111,14 +79,32 @@ public class Employee extends Person {
         return completedProjects;
     }
 
-    public void addCompletedProjects(Project projects) {
+    void addCompletedProjects(Project projects) {
+        removeCurrentProjects(projects);
         completedProjects.add(projects);
     }
 
-    public boolean equals(Employee employee) {
-        if (this.getId() == employee.getId()) {
-            return true;
-        }
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Employee employee = (Employee) o;
+
+        return employeeId == employee.employeeId;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) (employeeId ^ (employeeId >>> 32));
+    }
+
+    @Override
+    public String toString() {
+        return "id=" + getId() + " " +
+                super.toString() +
+                ", department=" + getDepartment() +
+                ", position='" + getPosition() + '\'' +
+                ", typeObject='" + getClass().getSimpleName() + '\'';
     }
 }

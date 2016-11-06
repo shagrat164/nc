@@ -1,4 +1,4 @@
-package lec11.app04.hrd;
+package lec11.app04.itfirma;
 
 public class Person {
     private String firstName;
@@ -33,5 +33,14 @@ public class Person {
 
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                '}';
     }
 }
