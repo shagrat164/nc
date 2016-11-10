@@ -1,9 +1,11 @@
-package lec14;
+package lec14.flappyBurd;
 
 import javafx.geometry.Point2D;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+
+import java.util.ArrayList;
 
 /**
  * Created by Администратор on 10.11.2016.
@@ -12,7 +14,7 @@ public class Bird extends Pane {
     public Point2D velocity;
     private Rectangle rectangle;
     public Bird() {
-        velocity = new Point2D(20, 20);
+        velocity = new Point2D(0, 0);
         rectangle = new Rectangle(20, 20, Color.RED);
         setTranslateY(300);
         setTranslateX(100);
@@ -51,18 +53,25 @@ public class Bird extends Pane {
 
     public void moveX(int value) {
         for (int i = 0; i < value; i++) {
-            for (Wall w : MainApp.walls) {
-                if (this.getBoundsInParent().intersects(w.getBoundsInParent())) {
-                    if (getTranslateX()+20 == w.getTranslateX()) {
-                        setTranslateX(getTranslateX()-1);
+            ArrayList<Wall> walls = MainApp.walls;
+            for (int j = 0; j < walls.size(); j++) {
+                Wall wall = walls.get(j);
+                if (this.getBoundsInParent().intersects(wall.getBoundsInParent())) {
+                    if ((this.getTranslateX() + 20) == wall.getTranslateX()) {
+                        setTranslateX(getTranslateX() - 1);
                         return;
                     }
                 }
-                if (getTranslateX()+20 == w.getTranslateX()) {
-                    MainApp.score++;
+                if ((this.getTranslateX() + 20) == wall.getTranslateX()) {
+                    MainApp.score += 1;
+                    System.out.println(MainApp.score);
                 }
             }
             setTranslateX(getTranslateX()+1);
         }
+    }
+
+    public void jump() {
+        velocity = new Point2D(3, -10);
     }
 }

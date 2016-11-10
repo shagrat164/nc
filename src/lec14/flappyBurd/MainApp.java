@@ -1,18 +1,12 @@
-package lec14;
+package lec14.flappyBurd;
 
-import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -29,9 +23,9 @@ public class MainApp extends Application {
 //    private static final int WIDTH    = 40;
 //    private static final int HEIGHT   = 35;
     private static final int WIDTH_SCENE = 600;
-    private static final int HEIGHT_SCENE = 600;
-    public static Pane appRoot;
-    public static Pane gameRoot;
+    private static final int HEIGHT_SCENE = 700;
+    public static Pane appRoot = new Pane();
+    public static Pane gameRoot = new Pane();
 
     public static ArrayList<Wall> walls = new ArrayList<>();
     Bird bird = new Bird();
@@ -49,7 +43,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Scene scene = new Scene(createContent());
-        scene.getOnMouseClicked(event->bird.jump());
+        scene.setOnMouseClicked(event->bird.jump());
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -72,27 +66,41 @@ public class MainApp extends Application {
     private Parent createContent() {
         gameRoot.setPrefSize(WIDTH_SCENE, HEIGHT_SCENE);
         for (int i = 0; i < 100; i++) {
-            int enter = (int) Math.random() * 100 + 50; //ширина проёма 50-150
+            int enter = (int) (Math.random() * 200) + 80; //ширина проёма 80-280
             int height = new Random().nextInt(HEIGHT_SCENE - enter);
+
             Wall wall = new Wall(height);
             wall.setTranslateX(i * 350 + HEIGHT_SCENE);
             wall.setTranslateY(0);
-            Wall wall2 = new Wall(HEIGHT_SCENE-height-enter);
+            walls.add(wall);
+
+            Wall wall2 = new Wall(HEIGHT_SCENE - height - enter);
             wall2.setTranslateX(i * 350 + HEIGHT_SCENE);
             wall2.setTranslateY(height + enter);
-            walls.add(wall);
             walls.add(wall2);
+
             gameRoot.getChildren().addAll(wall, wall2);
         }
         gameRoot.getChildren().add(bird);
         appRoot.getChildren().addAll(gameRoot);
+        appRoot.getChildren().add(scoreLabel);
         return appRoot;
     }
 
     private void update() {
+        if (bird.velocity.getY() < 5) {
+            bird.velocity = bird.velocity.add(0, 1);
+        }
         bird.moveX((int)bird.velocity.getX());
         bird.moveY((int)bird.velocity.getY());
         scoreLabel.setText("Score : " + score);
+
+        bird.translateXProperty().addListener((observable, oldValue, newValue) -> {
+            int offset = newValue.intValue();
+            if (offset > 200) {
+                gameRoot.setLayoutX( -(offset - 200));
+            }
+        });
     }
 
     public static void main(String[] args) {

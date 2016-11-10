@@ -1,4 +1,4 @@
-package lec14;
+package lec14.flappyBurd;
 
 import javafx.animation.Transition;
 import javafx.geometry.Rectangle2D;
