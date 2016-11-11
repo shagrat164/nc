@@ -21,7 +21,6 @@ public class Bird extends Pane {
         getChildren().addAll(rectangle);
     }
 
-
     public void moveY(int value) {
         boolean moveDown;
         if (value > 0) {
@@ -63,7 +62,7 @@ public class Bird extends Pane {
                     }
                 }
                 if ((this.getTranslateX() + 20) == wall.getTranslateX()) {
-                    MainApp.score += 1;
+                    MainApp.score++;
                     System.out.println(MainApp.score);
                 }
             }

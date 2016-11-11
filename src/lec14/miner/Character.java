@@ -18,16 +18,27 @@ public class Character extends Pane {
     Rectangle removeRect = null;
     SpriteAnimation animation;
 
-    public Character(ImageView imageView){
+    public Character(ImageView imageView) {
         this.imageView = imageView;
         this.imageView.setViewport(new Rectangle2D(offsetX,offsetY,width,height));
         animation = new SpriteAnimation(imageView,Duration.millis(200),count,columns,offsetX,offsetY,width,height);
         getChildren().addAll(imageView);
     }
 
-    public void moveX(int x){
-        boolean right = x>0?true:false;
+    public void moveX(int x) {
+        boolean right = x > 0;
         for(int i = 0; i < Math.abs(x); i++) {
+            for (Mob mob : Game.mobs) {
+                if (this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
+                    if (right) {
+                        this.setTranslateX(this.getTranslateX() - 1);
+                        return;
+                    } else {
+                        this.setTranslateX(this.getTranslateX() + 1);
+                        return;
+                    }
+                }
+            }
             if (right) this.setTranslateX(this.getTranslateX() + 1);
             else this.setTranslateX(this.getTranslateX() - 1);
             isBonuseEat();
@@ -41,9 +52,20 @@ public class Character extends Pane {
     }
 
     public void moveY(int y) {
-        boolean down = y > 0 ? true : false;
+        boolean moveDown = y > 0;
         for (int i = 0; i < Math.abs(y); i++) {
-            if (down) this.setTranslateY(this.getTranslateY() + 1);
+            for (Mob mob : Game.mobs) {
+                if (this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
+                    if (moveDown) {
+                        this.setTranslateY(this.getTranslateY() - 1);
+                        return;
+                    } else {
+                        this.setTranslateY(this.getTranslateY() + 1);
+                        return;
+                    }
+                }
+            }
+            if (moveDown) this.setTranslateY(this.getTranslateY() + 1);
             else this.setTranslateY(this.getTranslateY() - 1);
             isBonuseEat();
             if (getTranslateY() < 0) {
@@ -55,16 +77,16 @@ public class Character extends Pane {
         }
     }
 
-    public void isBonuseEat(){
-        MainApp.bonuses.forEach((rect) -> {
+    public void isBonuseEat() {
+        Game.bonuses.forEach((rect) -> {
             if (this.getBoundsInParent().intersects(rect.getBoundsInParent())) {
                 removeRect = rect;
                 score++;
-                System.out.println(score);
+//                System.out.println(score);
             }
         });
-        MainApp.bonuses.remove(removeRect);
-        MainApp.root.getChildren().remove(removeRect);
+        Game.bonuses.remove(removeRect);
+        Game.root.getChildren().remove(removeRect);
     }
 
     public int getScore() {
