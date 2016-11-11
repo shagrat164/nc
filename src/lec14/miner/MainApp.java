@@ -8,13 +8,15 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
+    private Game game = new Game();
+
+    public Game getGame() {
+        return game;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Game game = new Game();
-
         Scene scene = new Scene(game.createScene());
-
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -27,7 +29,6 @@ public class MainApp extends Application {
                 game.addKey(event.getCode(), false);
             }
         });
-
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -37,7 +38,6 @@ public class MainApp extends Application {
             }
         };
         timer.start();
-
         primaryStage.setTitle("Game");
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -22,14 +22,18 @@ public class Game {
     static ArrayList<Mob> mobs = new ArrayList<>();
     static Pane root = new Pane();
 
+    public Character getPlayer() {
+        return player;
+    }
+
     public void addKey(KeyCode keyCode, boolean flag) {
         this.keys.put(keyCode, flag);
     }
 
     public void createMobs() {
         int random = (int)Math.floor(Math.random()*500);
-        int x = (int)Math.floor(Math.random()*600);
-        int y = (int)Math.floor(Math.random()*600);
+        int x = (int)Math.floor(Math.random()*550+20);
+        int y = (int)Math.floor(Math.random()*550+20);
         if (random == 5) {
             ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("res/soldat13.png")));
             Mob mob = new Mob(imageView);
@@ -42,8 +46,8 @@ public class Game {
 
     public void bonus() {
         int random = (int)Math.floor(Math.random()*200);
-        int x = (int)Math.floor(Math.random()*600);
-        int y = (int)Math.floor(Math.random()*600);
+        int x = (int)Math.floor(Math.random()*550+20);
+        int y = (int)Math.floor(Math.random()*550+20);
         if (random == 5) {
             Rectangle rect = new Rectangle(20,20, Color.RED);
             rect.setX(x);

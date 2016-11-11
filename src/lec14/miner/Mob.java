@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 public class Mob extends Pane {
+//    private MainApp mainApp;
     private ImageView imageView;
     private int count = 3;
     private int columns = 3;
@@ -23,10 +24,16 @@ public class Mob extends Pane {
     }
 
     public void moveX(int x) {
-        boolean right = x > 0;
+        boolean moveRight;
+        if (x > 0) {
+            moveRight = true;
+        } else {
+            moveRight = false;
+        }
         for(int i = 0; i < Math.abs(x); i++) {
+//            if (this.getBoundsInParent().intersects())
 
-            if (right) {
+            if (moveRight) {
                 this.setTranslateX(this.getTranslateX() + 1);
             } else {
                 this.setTranslateX(this.getTranslateX() - 1);
