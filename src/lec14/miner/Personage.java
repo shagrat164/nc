@@ -6,7 +6,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
-public class Character extends Pane {
+import java.util.function.Consumer;
+
+public class Personage extends Pane {
     private ImageView imageView;
     private int count = 3;
     private int columns = 3;
@@ -15,10 +17,12 @@ public class Character extends Pane {
     private int width = 32;
     private int height = 32;
     private int score = 0;
+    private boolean moveRight;
+    private boolean moveDown;
     Rectangle removeRect = null;
     SpriteAnimation animation;
 
-    public Character(ImageView imageView) {
+    public Personage(ImageView imageView) {
         this.imageView = imageView;
         this.imageView.setViewport(new Rectangle2D(offsetX,offsetY,width,height));
         animation = new SpriteAnimation(imageView,Duration.millis(200),count,columns,offsetX,offsetY,width,height);
@@ -26,11 +30,17 @@ public class Character extends Pane {
     }
 
     public void moveX(int x) {
-        boolean right = x > 0;
+        if (x > 0) {
+            moveRight = true;
+            moveDown = false;
+        } else {
+            moveRight = false;
+            moveDown = false;
+        }
         for(int i = 0; i < Math.abs(x); i++) {
             for (Mob mob : Game.mobs) {
                 if (this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
-                    if (right) {
+                    if (moveRight) {
                         this.setTranslateX(this.getTranslateX() - 1);
                         return;
                     } else {
@@ -39,20 +49,29 @@ public class Character extends Pane {
                     }
                 }
             }
-            if (right) this.setTranslateX(this.getTranslateX() + 1);
-            else this.setTranslateX(this.getTranslateX() - 1);
+            if (moveRight) {
+                this.setTranslateX(this.getTranslateX() + 1);
+            } else {
+                this.setTranslateX(this.getTranslateX() - 1);
+            }
             isBonuseEat();
             if (getTranslateX() < 0) {
                 setTranslateX(0);
             }
-            if (getTranslateX() > 600 - width) {
-                setTranslateX(600 - width);
+            if (getTranslateX() > Game.WIDTH - width) {
+                setTranslateX(Game.WIDTH - width);
             }
         }
     }
 
     public void moveY(int y) {
-        boolean moveDown = y > 0;
+        if (y > 0) {
+            moveDown = true;
+            moveRight = false;
+        } else {
+            moveDown = false;
+            moveRight = false;
+        }
         for (int i = 0; i < Math.abs(y); i++) {
             for (Mob mob : Game.mobs) {
                 if (this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
@@ -65,24 +84,37 @@ public class Character extends Pane {
                     }
                 }
             }
-            if (moveDown) this.setTranslateY(this.getTranslateY() + 1);
-            else this.setTranslateY(this.getTranslateY() - 1);
+            if (moveDown) {
+                this.setTranslateY(this.getTranslateY() + 1);
+            } else {
+                this.setTranslateY(this.getTranslateY() - 1);
+            }
             isBonuseEat();
             if (getTranslateY() < 0) {
                 setTranslateY(0);
             }
-            if (getTranslateY() > 600 - width) {
-                setTranslateY(600 - width);
+            if (getTranslateY() > Game.HEIGHT - width) {
+                setTranslateY(Game.HEIGHT - width);
             }
         }
     }
 
+    public boolean isMoveRight() {
+        return moveRight;
+    }
+
+    public boolean isMoveDown() {
+        return moveDown;
+    }
+
     public void isBonuseEat() {
-        Game.bonuses.forEach((rect) -> {
-            if (this.getBoundsInParent().intersects(rect.getBoundsInParent())) {
-                removeRect = rect;
-                score++;
-//                System.out.println(score);
+        Game.bonuses.forEach(new Consumer<Rectangle>() {
+            @Override
+            public void accept(Rectangle rect) {
+                if (Personage.this.getBoundsInParent().intersects(rect.getBoundsInParent())) {
+                    removeRect = rect;
+                    score++;
+                }
             }
         });
         Game.bonuses.remove(removeRect);
@@ -91,5 +123,11 @@ public class Character extends Pane {
 
     public int getScore() {
         return score;
+    }
+
+    void shooting() {
+        Bullet bullet = new Bullet(this);
+        Game.bullets.add(bullet);
+        Game.root.getChildren().add(bullet);
     }
 }

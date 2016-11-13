@@ -14,7 +14,12 @@ public class Mob extends Pane {
     private int offsetY = 0;
     private int width = 32;
     private int height = 34;
+    private Personage personage;
     SpriteAnimation animation;
+
+    public void setPersonage(Personage personage) {
+        this.personage = personage;
+    }
 
     public Mob(ImageView imageView) {
         this.imageView = imageView;
@@ -31,19 +36,25 @@ public class Mob extends Pane {
             moveRight = false;
         }
         for(int i = 0; i < Math.abs(x); i++) {
-//            if (this.getBoundsInParent().intersects())
-
+            if (this.getBoundsInParent().intersects(this.personage.getBoundsInParent())) {
+                if (moveRight) {
+                    this.setTranslateX(this.getTranslateX() - 1);
+                    return;
+                } else {
+                    this.setTranslateX(this.getTranslateX() + 1);
+                    return;
+                }
+            }
             if (moveRight) {
                 this.setTranslateX(this.getTranslateX() + 1);
             } else {
                 this.setTranslateX(this.getTranslateX() - 1);
             }
-//            isBonuseEat();
             if (getTranslateX() < 0) {
                 setTranslateX(0);
             }
-            if (getTranslateX() > 600 - width) {
-                setTranslateX(600 - width);
+            if (getTranslateX() > Game.WIDTH - width) {
+                setTranslateX(Game.WIDTH - width);
             }
         }
     }
@@ -56,18 +67,25 @@ public class Mob extends Pane {
             moveDown = false;
         }
         for (int i = 0; i < Math.abs(value); i++) {
-
+            if (this.getBoundsInParent().intersects(this.personage.getBoundsInParent())) {
+                if (moveDown) {
+                    this.setTranslateY(this.getTranslateY() - 1);
+                    return;
+                } else {
+                    this.setTranslateY(this.getTranslateY() + 1);
+                    return;
+                }
+            }
             if (moveDown) {
                 this.setTranslateY(this.getTranslateY() + 1);
             } else {
                 this.setTranslateY(this.getTranslateY() - 1);
             }
-//            isBonuseEat();
-            if (getTranslateY() < 0) {
-                setTranslateY(0);
+            if (this.getTranslateY() < 0) {
+                this.setTranslateY(0);
             }
-            if (getTranslateY() > 600 - width) {
-                setTranslateY(600 - width);
+            if (this.getTranslateY() > Game.HEIGHT - width) {
+                this.setTranslateY(Game.HEIGHT - width);
             }
         }
     }

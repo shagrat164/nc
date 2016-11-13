@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -14,20 +15,25 @@ import java.util.HashMap;
 
 public class Game {
     private ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("res/1.png")));
-    private Character player = new Character(imageView);
+    private Personage player = new Personage(imageView);
     private Label scoreLabel = new Label("Score: " + player.getScore());
     private HashMap<KeyCode, Boolean> keys = new HashMap<>();
+    private HashMap<MouseButton, Boolean> keysMouse = new HashMap<>();
 
     static ArrayList<Rectangle> bonuses = new ArrayList<>();
     static ArrayList<Mob> mobs = new ArrayList<>();
+    static ArrayList<Bullet> bullets = new ArrayList<>();
     static Pane root = new Pane();
 
-    public Character getPlayer() {
-        return player;
-    }
+    public static final int WIDTH = 600;
+    public static final int HEIGHT = 600;
 
     public void addKey(KeyCode keyCode, boolean flag) {
         this.keys.put(keyCode, flag);
+    }
+
+    public void addKey(MouseButton keyCode, boolean flag) {
+        this.keysMouse.put(keyCode, flag);
     }
 
     public void createMobs() {
@@ -37,10 +43,11 @@ public class Game {
         if (random == 5) {
             ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("res/soldat13.png")));
             Mob mob = new Mob(imageView);
+            mob.setPersonage(this.player);
             mob.setTranslateX(x);
             mob.setTranslateY(y);
             mobs.add(mob);
-            root.getChildren().addAll(mob);
+            root.getChildren().add(mob);
         }
     }
 
@@ -53,7 +60,7 @@ public class Game {
             rect.setX(x);
             rect.setY(y);
             bonuses.add(rect);
-            root.getChildren().addAll(rect);
+            root.getChildren().add(rect);
         }
     }
 
@@ -77,22 +84,35 @@ public class Game {
         } else {
             player.animation.stop();
         }
+        if (isPressed(KeyCode.SPACE)) {
+            player.shooting();
+        }
+        if (isClicked(MouseButton.PRIMARY)) {
+            player.shooting();
+        }
         scoreLabel.setText("Score: " + player.getScore());
 
-        for (Mob mob : mobs) {
-            mob.animation.play();
-            mob.animation.setOffsetY(69);
-            mob.moveX(2);
+        for (Bullet bullet : bullets) {
+            bullet.update();
         }
+
+//        if (bullets.size() > 500) {
+//            System.out.println(bullets.size());
+//        }
     }
 
     public boolean isPressed(KeyCode key) {
         return keys.getOrDefault(key, false);
     }
 
+    public boolean isClicked(MouseButton mouseButton) {
+        return keysMouse.getOrDefault(mouseButton, false);
+    }
+
     public Parent createScene() {
-        root.setPrefSize(600,600);
-        root.getChildren().addAll(player, scoreLabel);
+        root.setPrefSize(WIDTH,HEIGHT);
+        root.getChildren().add(player);
+        root.getChildren().add(scoreLabel);
         return root;
     }
 }
