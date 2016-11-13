@@ -12,11 +12,13 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.function.Consumer;
 
 public class Game {
     private ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("res/1.png")));
     private Personage player = new Personage(imageView);
     private Label scoreLabel = new Label("Score: " + player.getScore());
+    private Label scoreMobsLabel = new Label("Score mobs: " + player.getScoreMobs());
     private HashMap<KeyCode, Boolean> keys = new HashMap<>();
     private HashMap<MouseButton, Boolean> keysMouse = new HashMap<>();
 
@@ -84,21 +86,15 @@ public class Game {
         } else {
             player.animation.stop();
         }
-        if (isPressed(KeyCode.SPACE)) {
-            player.shooting();
-        }
-        if (isClicked(MouseButton.PRIMARY)) {
+        if (isPressed(KeyCode.SPACE) || isClicked(MouseButton.PRIMARY)) {
             player.shooting();
         }
         scoreLabel.setText("Score: " + player.getScore());
+        scoreMobsLabel.setText("Score mobs: " + player.getScoreMobs());
 
         for (Bullet bullet : bullets) {
             bullet.update();
         }
-
-//        if (bullets.size() > 500) {
-//            System.out.println(bullets.size());
-//        }
     }
 
     public boolean isPressed(KeyCode key) {
@@ -111,8 +107,10 @@ public class Game {
 
     public Parent createScene() {
         root.setPrefSize(WIDTH,HEIGHT);
+        scoreMobsLabel.setTranslateY(15);
         root.getChildren().add(player);
         root.getChildren().add(scoreLabel);
+        root.getChildren().add(scoreMobsLabel);
         return root;
     }
 }

@@ -17,9 +17,9 @@ public class Personage extends Pane {
     private int width = 32;
     private int height = 32;
     private int score = 0;
-    private boolean moveRight;
-    private boolean moveDown;
-    Rectangle removeRect = null;
+    private int scoreMobs = 0;
+    private byte direction; //0-right, 1-left, 2-down, 3-up
+    private Rectangle removeRect = null;
     SpriteAnimation animation;
 
     public Personage(ImageView imageView) {
@@ -30,12 +30,13 @@ public class Personage extends Pane {
     }
 
     public void moveX(int x) {
+        boolean moveRight;
         if (x > 0) {
             moveRight = true;
-            moveDown = false;
+            direction = 0;
         } else {
             moveRight = false;
-            moveDown = false;
+            direction = 1;
         }
         for(int i = 0; i < Math.abs(x); i++) {
             for (Mob mob : Game.mobs) {
@@ -65,12 +66,13 @@ public class Personage extends Pane {
     }
 
     public void moveY(int y) {
+        boolean moveDown;
         if (y > 0) {
             moveDown = true;
-            moveRight = false;
+            direction = 2;
         } else {
             moveDown = false;
-            moveRight = false;
+            direction = 3;
         }
         for (int i = 0; i < Math.abs(y); i++) {
             for (Mob mob : Game.mobs) {
@@ -99,12 +101,8 @@ public class Personage extends Pane {
         }
     }
 
-    public boolean isMoveRight() {
-        return moveRight;
-    }
-
-    public boolean isMoveDown() {
-        return moveDown;
+    public byte getDirection() {
+        return direction;
     }
 
     public void isBonuseEat() {
@@ -123,6 +121,14 @@ public class Personage extends Pane {
 
     public int getScore() {
         return score;
+    }
+
+    public int getScoreMobs() {
+        return scoreMobs;
+    }
+
+    public void setScoreMobs(int scoreMobs) {
+        this.scoreMobs = scoreMobs;
     }
 
     void shooting() {

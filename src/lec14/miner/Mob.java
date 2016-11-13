@@ -5,6 +5,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
+import java.util.function.Consumer;
+
 public class Mob extends Pane {
 //    private MainApp mainApp;
     private ImageView imageView;
@@ -15,17 +17,18 @@ public class Mob extends Pane {
     private int width = 32;
     private int height = 34;
     private Personage personage;
+    private Mob removeMob = null;
     SpriteAnimation animation;
-
-    public void setPersonage(Personage personage) {
-        this.personage = personage;
-    }
 
     public Mob(ImageView imageView) {
         this.imageView = imageView;
         this.imageView.setViewport(new Rectangle2D(offsetX,offsetY,width,height));
         animation = new SpriteAnimation(imageView, Duration.millis(200),count,columns,offsetX,offsetY,width,height);
         getChildren().addAll(imageView);
+    }
+
+    public void setPersonage(Personage personage) {
+        this.personage = personage;
     }
 
     public void moveX(int x) {
@@ -56,6 +59,7 @@ public class Mob extends Pane {
             if (getTranslateX() > Game.WIDTH - width) {
                 setTranslateX(Game.WIDTH - width);
             }
+            isMobsDead();
         }
     }
 
@@ -87,6 +91,21 @@ public class Mob extends Pane {
             if (this.getTranslateY() > Game.HEIGHT - width) {
                 this.setTranslateY(Game.HEIGHT - width);
             }
+            isMobsDead();
         }
+    }
+
+    private void isMobsDead() {
+        Game.mobs.forEach(new Consumer<Mob>() {
+            @Override
+            public void accept(Mob mob) {
+                if (Mob.this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
+                    removeMob = mob;
+                    personage.setScoreMobs(personage.getScoreMobs() + 1);
+                }
+            }
+        });
+        Game.mobs.remove(removeMob);
+        Game.root.getChildren().remove(removeMob);
     }
 }
