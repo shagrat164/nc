@@ -1,23 +1,23 @@
-package lec14.miner;
+package lec14.miner.component;
 
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-
-import java.util.function.Consumer;
+import lec14.miner.Bullet;
+import lec14.miner.Game;
 
 public class Mob extends Pane {
-//    private MainApp mainApp;
-    private ImageView imageView;
+    ImageView imageView;
     private int count = 3;
     private int columns = 3;
     private int offsetX = 0;
     private int offsetY = 0;
     private int width = 32;
     private int height = 34;
-    private Personage personage;
-    private Mob removeMob = null;
+    private Player player;
+    private int targetX;
+    private int targetY;
     SpriteAnimation animation;
 
     public Mob(ImageView imageView) {
@@ -27,19 +27,19 @@ public class Mob extends Pane {
         getChildren().addAll(imageView);
     }
 
-    public void setPersonage(Personage personage) {
-        this.personage = personage;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
-    public void moveX(int x) {
+    public void moveX(int value) {
         boolean moveRight;
-        if (x > 0) {
+        if (value > 0) {
             moveRight = true;
         } else {
             moveRight = false;
         }
-        for(int i = 0; i < Math.abs(x); i++) {
-            if (this.getBoundsInParent().intersects(this.personage.getBoundsInParent())) {
+        for(int i = 0; i < Math.abs(value); i++) {
+            if (this.getBoundsInParent().intersects(this.player.getBoundsInParent())) {
                 if (moveRight) {
                     this.setTranslateX(this.getTranslateX() - 1);
                     return;
@@ -59,7 +59,6 @@ public class Mob extends Pane {
             if (getTranslateX() > Game.WIDTH - width) {
                 setTranslateX(Game.WIDTH - width);
             }
-            isMobsDead();
         }
     }
 
@@ -71,7 +70,7 @@ public class Mob extends Pane {
             moveDown = false;
         }
         for (int i = 0; i < Math.abs(value); i++) {
-            if (this.getBoundsInParent().intersects(this.personage.getBoundsInParent())) {
+            if (this.getBoundsInParent().intersects(this.player.getBoundsInParent())) {
                 if (moveDown) {
                     this.setTranslateY(this.getTranslateY() - 1);
                     return;
@@ -91,21 +90,15 @@ public class Mob extends Pane {
             if (this.getTranslateY() > Game.HEIGHT - width) {
                 this.setTranslateY(Game.HEIGHT - width);
             }
-            isMobsDead();
         }
     }
 
-    private void isMobsDead() {
-        Game.mobs.forEach(new Consumer<Mob>() {
-            @Override
-            public void accept(Mob mob) {
-                if (Mob.this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
-                    removeMob = mob;
-                    personage.setScoreMobs(personage.getScoreMobs() + 1);
-                }
-            }
-        });
-        Game.mobs.remove(removeMob);
-        Game.root.getChildren().remove(removeMob);
+    public boolean updateTarget(int targetX, int targetY) {
+        if (this.targetX != targetX || this.targetY != targetY) {
+            this.targetX = targetX;
+            this.targetY = targetY;
+            return true;
+        }
+        return false;
     }
 }

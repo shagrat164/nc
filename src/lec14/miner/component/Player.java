@@ -1,44 +1,46 @@
-package lec14.miner;
+package lec14.miner.component;
 
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+import lec14.miner.Bullet;
+import lec14.miner.Game;
 
 import java.util.function.Consumer;
 
-public class Personage extends Pane {
-    private ImageView imageView;
+public class Player extends Pane {
+    ImageView imageView;
     private int count = 3;
     private int columns = 3;
     private int offsetX = 0;
     private int offsetY = 0;
     private int width = 32;
     private int height = 32;
-    private int score = 0;
+    private int scoreBonus = 0;
     private int scoreMobs = 0;
-    private byte direction; //0-right, 1-left, 2-down, 3-up
+    private byte direction;
     private Rectangle removeRect = null;
-    SpriteAnimation animation;
+    public SpriteAnimation animation;
 
-    public Personage(ImageView imageView) {
+    public Player(ImageView imageView) {
         this.imageView = imageView;
         this.imageView.setViewport(new Rectangle2D(offsetX,offsetY,width,height));
         animation = new SpriteAnimation(imageView,Duration.millis(200),count,columns,offsetX,offsetY,width,height);
         getChildren().addAll(imageView);
     }
 
-    public void moveX(int x) {
+    public void moveX(int value) {
         boolean moveRight;
-        if (x > 0) {
+        if (value > 0) {
             moveRight = true;
             direction = 0;
         } else {
             moveRight = false;
             direction = 1;
         }
-        for(int i = 0; i < Math.abs(x); i++) {
+        for(int i = 0; i < Math.abs(value); i++) {
             for (Mob mob : Game.mobs) {
                 if (this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
                     if (moveRight) {
@@ -65,16 +67,16 @@ public class Personage extends Pane {
         }
     }
 
-    public void moveY(int y) {
+    public void moveY(int value) {
         boolean moveDown;
-        if (y > 0) {
+        if (value > 0) {
             moveDown = true;
             direction = 2;
         } else {
             moveDown = false;
             direction = 3;
         }
-        for (int i = 0; i < Math.abs(y); i++) {
+        for (int i = 0; i < Math.abs(value); i++) {
             for (Mob mob : Game.mobs) {
                 if (this.getBoundsInParent().intersects(mob.getBoundsInParent())) {
                     if (moveDown) {
@@ -109,9 +111,9 @@ public class Personage extends Pane {
         Game.bonuses.forEach(new Consumer<Rectangle>() {
             @Override
             public void accept(Rectangle rect) {
-                if (Personage.this.getBoundsInParent().intersects(rect.getBoundsInParent())) {
+                if (Player.this.getBoundsInParent().intersects(rect.getBoundsInParent())) {
                     removeRect = rect;
-                    score++;
+                    scoreBonus++;
                 }
             }
         });
@@ -119,8 +121,8 @@ public class Personage extends Pane {
         Game.root.getChildren().remove(removeRect);
     }
 
-    public int getScore() {
-        return score;
+    public int getScoreBonus() {
+        return scoreBonus;
     }
 
     public int getScoreMobs() {
@@ -131,7 +133,7 @@ public class Personage extends Pane {
         this.scoreMobs = scoreMobs;
     }
 
-    void shooting() {
+    public void shooting() {
         Bullet bullet = new Bullet(this);
         Game.bullets.add(bullet);
         Game.root.getChildren().add(bullet);

@@ -9,23 +9,26 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import lec14.miner.component.Mob;
+import lec14.miner.component.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.function.Consumer;
 
 public class Game {
     private ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("res/1.png")));
-    private Personage player = new Personage(imageView);
-    private Label scoreLabel = new Label("Score: " + player.getScore());
+    private Player player = new Player(imageView);
+
+    private Label scoreLabel = new Label("Score: " + player.getScoreBonus());
     private Label scoreMobsLabel = new Label("Score mobs: " + player.getScoreMobs());
+
     private HashMap<KeyCode, Boolean> keys = new HashMap<>();
     private HashMap<MouseButton, Boolean> keysMouse = new HashMap<>();
 
-    static ArrayList<Rectangle> bonuses = new ArrayList<>();
-    static ArrayList<Mob> mobs = new ArrayList<>();
-    static ArrayList<Bullet> bullets = new ArrayList<>();
-    static Pane root = new Pane();
+    public static ArrayList<Rectangle> bonuses = new ArrayList<>();
+    public static ArrayList<Mob> mobs = new ArrayList<>();
+    public static ArrayList<Bullet> bullets = new ArrayList<>();
+    public static Pane root = new Pane();
 
     public static final int WIDTH = 600;
     public static final int HEIGHT = 600;
@@ -45,7 +48,7 @@ public class Game {
         if (random == 5) {
             ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("res/soldat13.png")));
             Mob mob = new Mob(imageView);
-            mob.setPersonage(this.player);
+            mob.setPlayer(this.player);
             mob.setTranslateX(x);
             mob.setTranslateY(y);
             mobs.add(mob);
@@ -89,7 +92,7 @@ public class Game {
         if (isPressed(KeyCode.SPACE) || isClicked(MouseButton.PRIMARY)) {
             player.shooting();
         }
-        scoreLabel.setText("Score: " + player.getScore());
+        scoreLabel.setText("Score: " + player.getScoreBonus());
         scoreMobsLabel.setText("Score mobs: " + player.getScoreMobs());
 
         for (Bullet bullet : bullets) {

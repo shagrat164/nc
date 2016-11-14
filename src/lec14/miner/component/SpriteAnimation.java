@@ -1,4 +1,4 @@
-package lec14.miner;
+package lec14.miner.component;
 
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
@@ -30,7 +30,7 @@ public class SpriteAnimation  extends Transition {
         this.imageView.setViewport(new Rectangle2D(offsetX, offsetY, width, height));
     }
 
-    void setOffsetY(int y) {
+    public void setOffsetY(int y) {
         this.offsetY = y;
     }
 
