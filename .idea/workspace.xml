@@ -2,8 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="608eefd2-f2f8-457c-8e2d-77a0c098c501" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lec16/app01/App01.java" afterPath="$PROJECT_DIR$/src/main/java/lec16/app01/App01.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java" afterPath="$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/NetCracker/A.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/NetCracker/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/NetCracker/app00$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/NetCracker/app00.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lec16/app01/App01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lec16/app01/Singleton.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NetCracker/lec12/App01.class.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/lec16/app01/App01.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NetCracker/lec16/app01/App01.class" afterPath="$PROJECT_DIR$/out/production/NetCracker/lec16/app01/App01.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NetCracker/lec16/app01/Singleton.class" afterPath="$PROJECT_DIR$/out/production/NetCracker/lec16/app01/Singleton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NetCracker.iml" afterPath="$PROJECT_DIR$/NetCracker.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/calc/Main.java" afterPath="$PROJECT_DIR$/src/calc/Main.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/calc/app00.java" afterPath="$PROJECT_DIR$/src/calc/app00.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/app09/Calc.java" afterPath="$PROJECT_DIR$/src/app09/Calc.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/app09/ExpressionParser.java" afterPath="$PROJECT_DIR$/src/app09/ExpressionParser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/app09/ParserException.java" afterPath="$PROJECT_DIR$/src/app09/ParserException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app01/Person.java" afterPath="$PROJECT_DIR$/src/lec11/app01/Person.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app01/PersonComparator.java" afterPath="$PROJECT_DIR$/src/lec11/app01/PersonComparator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app01/app.java" afterPath="$PROJECT_DIR$/src/lec11/app01/app.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app02/ListIteratorArray.java" afterPath="$PROJECT_DIR$/src/lec11/app02/ListIteratorArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app02/app.java" afterPath="$PROJECT_DIR$/src/lec11/app02/app.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app03/App.java" afterPath="$PROJECT_DIR$/src/lec11/app03/App.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/MainApp.java" afterPath="$PROJECT_DIR$/src/lec11/app04/MainApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Customer.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Customer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Department.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Department.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Employee.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Employee.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Head.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Head.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/HumanResourcesDepartment.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/HumanResourcesDepartment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Menu.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Menu.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Person.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Person.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec11/app04/itfirma/Project.java" afterPath="$PROJECT_DIR$/src/lec11/app04/itfirma/Project.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec12/App01.java" afterPath="$PROJECT_DIR$/src/lec12/App01.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/flappyBurd/Bird.java" afterPath="$PROJECT_DIR$/src/lec14/flappyBurd/Bird.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/flappyBurd/MainApp.java" afterPath="$PROJECT_DIR$/src/lec14/flappyBurd/MainApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/flappyBurd/SpriteAnimation.java" afterPath="$PROJECT_DIR$/src/lec14/flappyBurd/SpriteAnimation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/flappyBurd/Wall.java" afterPath="$PROJECT_DIR$/src/lec14/flappyBurd/Wall.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/flappyBurd/res/post-1609954-1339553256.png" afterPath="$PROJECT_DIR$/src/lec14/flappyBurd/res/post-1609954-1339553256.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/Bullet.java" afterPath="$PROJECT_DIR$/src/lec14/miner/Bullet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/Game.java" afterPath="$PROJECT_DIR$/src/lec14/miner/Game.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/MainApp.java" afterPath="$PROJECT_DIR$/src/lec14/miner/MainApp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/component/Mob.java" afterPath="$PROJECT_DIR$/src/lec14/miner/component/Mob.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/component/Player.java" afterPath="$PROJECT_DIR$/src/lec14/miner/component/Player.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/component/SpriteAnimation.java" afterPath="$PROJECT_DIR$/src/lec14/miner/component/SpriteAnimation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/res/1.png" afterPath="$PROJECT_DIR$/src/lec14/miner/res/1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/lec14/miner/res/soldat13.png" afterPath="$PROJECT_DIR$/src/lec14/miner/res/soldat13.png" />
     </list>
     <ignored path="NetCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,31 +73,7 @@
     <favorites_list name="NetCracker" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App01.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lec16/app01/App01.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Singleton.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-              <folding>
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,8 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/lec11/app02/app.java" />
-        <option value="$PROJECT_DIR$/src/lec11/app02/ListIterator.java" />
         <option value="$PROJECT_DIR$/src/lec11/app02/ListIteratorArray.java" />
         <option value="$PROJECT_DIR$/src/lec11/app03/App.java" />
         <option value="$PROJECT_DIR$/src/lec11/app04/hrd/Departament.java" />
@@ -116,11 +138,13 @@
         <option value="$PROJECT_DIR$/src/lec14/miner/component/Player.java" />
         <option value="$PROJECT_DIR$/src/lec14/miner/Game.java" />
         <option value="$PROJECT_DIR$/src/lec16/app01/Singletone.java" />
-        <option value="$PROJECT_DIR$/src/lec16/app01/App01.java" />
-        <option value="$PROJECT_DIR$/src/lec16/app01/Singleton.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/lec16/app01/App01.java" />
         <option value="$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lec16/app01/App01.java" />
+        <option value="$PROJECT_DIR$/src/lec16/app01/Singleton.java" />
+        <option value="$PROJECT_DIR$/NetCracker.iml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/src/lec16/app01/App01.java" />
       </list>
     </option>
   </component>
@@ -140,8 +164,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -169,7 +193,10 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+        <subPane subId="Default" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,22 +228,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NetCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="lec16" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,86 +244,29 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lec14" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
-        <subPane subId="Default" />
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java\nc\NetCracker\src\main\java\lec16" />
+      <recent name="E:\java\nc\NetCracker\src" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.App01 (1)">
     <configuration default="false" name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -599,6 +555,28 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -701,21 +679,22 @@
     <option name="totallyTimeSpent" value="1643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33579725" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33595505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17864583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -726,7 +705,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -753,35 +731,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/io/FileInputStream.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/NetCracker/lec12/App01.class.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/beans/value/ObservableObjectValue.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/geometry/BoundingBox.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/geometry/Bounds.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/beans/property/adapter/ReadOnlyJavaBeanDoubleProperty.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/beans/value/ObservableDoubleValue.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/beans/property/DoubleProperty.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/io/PrintStream.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/flappyBurd/SpriteAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/collections/ObservableList.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/Scene.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/HashMap.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/shape/Rectangle.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/animation/AnimationTimer.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/input/KeyEvent.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/event/Event.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/event/EventHandler.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/animation/Transition.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/lang/Thread.java" />
@@ -792,7 +741,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/collections/ObservableListBase.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/Node.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/flappyBurd/Wall.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/flappyBurd/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -802,7 +751,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/input/KeyCode.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/shape/Circle.java" />
     <entry file="file://$PROJECT_DIR$/src/lec14/miner/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec12/App01.java">
+    <entry file="file://$PROJECT_DIR$/src/lec12/App01.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -813,7 +762,7 @@
     <entry file="file://$PROJECT_DIR$/src/lec14/miner/Personage.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/ArrayList.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/function/Consumer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/flappyBurd/Bird.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/flappyBurd/Bird.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
@@ -821,7 +770,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lec14/miner/component.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/miner/component/SpriteAnimation.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/miner/component/SpriteAnimation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -831,72 +780,160 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/layout/Pane.java" />
     <entry file="file://$PROJECT_DIR$/src/lec14/miner/component/Unit.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/application/Application.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/flappyBurd/MainApp.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/flappyBurd/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/miner/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/miner/component/Mob.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/miner/component/Mob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/miner/component/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/miner/component/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/miner/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/miner/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec14/miner/MainApp.java">
+    <entry file="file://$PROJECT_DIR$/src/lec14/miner/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec16/app01/App01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java">
+    <entry file="file://$PROJECT_DIR$/src/lec11/app03/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-          </folding>
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lec16/app01/Singleton.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1887">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/lec16/app01/App01.java" />
+    <entry file="file://$PROJECT_DIR$/src/lec14/miner/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calc/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/app09/ParserException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app09/ExpressionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app09/Calc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calc/app00.java" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NetCracker.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lec16/app01/Singleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lec16/app01/App01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
