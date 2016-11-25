@@ -1,8 +1,7 @@
+package lec19;
+
 import java.util.Random;
 
-/**
- * Created by student on 23.11.16.
- */
 public class Robot implements Runnable {
     private int health;
     private String name;

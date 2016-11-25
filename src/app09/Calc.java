@@ -56,7 +56,7 @@ public class Calc {
         return stack.pop();
     }
 
-    public static void main (String[] args) throws ParserException {
+    public static void main (String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
             try {
