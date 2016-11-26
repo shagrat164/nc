@@ -1,12 +1,10 @@
 package lec19;
 
-import java.net.Socket;
-
 public class Arena {
     public static void main(String[] args) throws InterruptedException {
-        Arena arena = new Arena();
-        Robot player1 = new Robot("Âàñÿ");
-        Robot player2 = new Robot("Äæîí");
+        final Arena arena = new Arena();
+        Robot player1 = new Robot("Ğ˜Ğ²Ğ°Ğ½", arena);
+        Robot player2 = new Robot("Ğ’Ğ°ÑĞ¸Ğ»Ğ¸Ğ¹", arena);
 
         player1.setEnemy(player2);
         player2.setEnemy(player1);
@@ -17,12 +15,10 @@ public class Arena {
         threadPlayer1.start();
         threadPlayer2.start();
 
-        arena.waitWinner();
+//        arena.waitWinner();
     }
 
     private void waitWinner() throws InterruptedException {
-//        while (true) {
-//            super.wait(1000);
-//        }
+
     }
 }

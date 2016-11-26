@@ -1,17 +1,16 @@
 package lec19.app02;
 
-/**
- * Created by danila on 25.11.2016.
- */
 public class App01 {
+    private static final CommonRes commRes = new CommonRes();
+
     public static void main(String[] args) throws InterruptedException {
-        Ping ping = new Ping();
-        Pong pong = new Pong();
+        Ping ping = new Ping(commRes);
+        Pong pong = new Pong(commRes);
+
         Thread threadPing = new Thread(ping);
         Thread threadPong = new Thread(pong);
 
-        threadPing.setName("Thread Ping");
-        threadPong.setName("Thread Pong");
+        System.out.println("Игра начинается.");
 
         threadPing.start();
         threadPong.start();
@@ -22,4 +21,3 @@ public class App01 {
         System.out.println("Игра окончена.");
     }
 }
-
